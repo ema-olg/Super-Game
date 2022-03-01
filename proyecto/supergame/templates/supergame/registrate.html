@@ -1,0 +1,18 @@
+{% extends 'supergame/layout.html' %} {% load static %} {% block content %}
+<header>
+    <input type="checkbox" id="btn">
+    <label for="btn"><img src="{% static 'img/tresBarras.png' %}" class="nav-btn"></label>
+    <nav class="nav-cont">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="/">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<h1 class="h1-r">Registrarte es facil y es gratis...</h1>
+<form action="/registrate" method="POST" class="form-r">
+    {% csrf_token %} {{form.as_p}} {{mensaje}}
+    <p class="p-r">Jamas compartiremos tus datos con ningúna otra persona</p>
+    <br>
+    <button type="submit" class="btn-r">Enviar</button>
+</form>
+{% endblock %}

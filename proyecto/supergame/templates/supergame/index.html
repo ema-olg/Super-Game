@@ -1,0 +1,25 @@
+{% extends 'supergame/layout.html' %} {% load static %} {% block content %}
+<header>
+    <input type="checkbox" id="btn">
+    <label for="btn"><img src="{% static 'img/tresBarras.png' %}" class="nav-btn"></label>
+    <nav class="nav-cont">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="registrate">Registrate</a></li>
+        </ul>
+    </nav>
+    <div class="wave">
+        <h1 class="h1-i">Super Game</h1>
+        <img class="wave-img" src="{% static 'img/wave.png' %}">
+    </div>
+</header>
+<main>
+    <div class="div-main">
+        <img class="mario" src="{% static 'img/Mario.png' %}" alt="mario">
+        <form action="/" method="POST" class="form-I">
+            {% csrf_token %} {{form.as_p}}
+            <button class="btn-I">Iniciar Sesión</button>
+        </form>
+    </div>
+    <p class="main-p p-u">QUE LA AVENTURA COMIENCE</p>
+</main>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'supergame/layout.html' %} {% load static%} {% block content %}
+<header>
+    <input type="checkbox" id="btn">
+    <label for="btn"><img src="{% static 'img/tresBarras.png' %}" class="nav-btn"></label>
+    <nav class="nav-cont">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="comentariosList">comentarios</a></li>
+            <li class="nav-li"><a class="nav-a" href="comentarios">comentar</a></li>
+            <li class="nav-li"><a class="nav-a" href="publicar">publicar</a></li>
+            <li class="nav-li"><a class="nav-a" href="juegos">Juegos</a></li>
+            <li class="nav-li"><a class="nav-a" href="usuariosCreados">amigos</a></li>
+            <li class="nav-li"><a class="nav-a" href="salir">Salir</a></li>
+        </ul>
+    </nav>
+    <div class="wave">
+        <h1 class="h1-i">Super Game</h1>
+        <img class="wave-img" src="{% static 'img/wave.png' %}">
+    </div>
+</header>
+<main>
+    <p class="p-qs">
+        Somos el mercado más grande de Latinoamérica en ventas de juegos de todo tipo, si buscas algo y no lo tenemos es porque no existe.
+    </p>
+    <p class="p-qs">
+        Esperamos que al iniciarte en nuestra plataforma de ventas encuentres todo lo que buscas y que paces un tiempo ameno.
+    </p>
+    <br>
+    <p class="p-qs">
+        Nuestra idea: seguir creciendo y quien quiera participar de esta increíble tarea puede escribirnos a nuestros contactos. Gracias por formar parte de este hermoso proyecto.
+    </p>
+</main>
+{% endblock %}

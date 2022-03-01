@@ -1,0 +1,37 @@
+{% extends 'supergame/layout.html' %} {% load static%} {% block content %}
+<header>
+    <input type="checkbox" id="btn">
+    <label for="btn"><img src="{% static 'img/tresBarras.png' %}" class="nav-btn"></label>
+    <nav class="nav-cont">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="comentariosList">comentarios</a></li>
+            <li class="nav-li"><a class="nav-a" href="comentarios">comentar</a></li>
+            <li class="nav-li"><a class="nav-a" href="publicar">publicar</a></li>
+            <li class="nav-li"><a class="nav-a" href="usuariosCreados">amigos</a></li>
+            <li class="nav-li"><a class="nav-a" href="quienessomos">quienes somos</a></li>
+            <li class="nav-li"><a class="nav-a" href="salir">Salir</a></li>
+        </ul>
+    </nav>
+    <div class="wave">
+        <h1 class="h1-i">Super Game</h1>
+        <h5 id="h5-b">{{user}}@</h5>
+        <img class="wave-img" src="{% static 'img/wave.png' %}">
+    </div>
+</header>
+<main class="main-c">
+    {% for c in juegos %}
+    <div class="div-cards-sup">
+        <div class="div-cards">
+            <h5>{{ c.titulo }}</h5>
+            <img src="{{ c.imagen.url }}" alt="{{ c.titulo }}" title="{{ c.titulo }}">
+            <p>{{ c.descripcion }}</p>
+            <h6>U$D {{ c.presio }}</h6>
+            <div class="btn-EE">
+                <a href="eliminar/{{c.id}}/" class="btn-eliminar">ELIMINAR</a>
+                <a href="editar/{{c.id}}/" class="btn-editar">EDITAR</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}

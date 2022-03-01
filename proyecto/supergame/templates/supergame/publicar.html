@@ -1,0 +1,26 @@
+{% extends 'supergame/layout.html' %} {% load static %} {% block content %}
+<header>
+    <input type="checkbox" id="btn">
+    <label for="btn"><img src="{% static 'img/tresBarras.png' %}" class="nav-btn"></label>
+    <nav class="nav-cont">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="comentariosList">comentarios</a></li>
+            <li class="nav-li"><a class="nav-a" href="comentarios">comentar</a></li>
+            <li class="nav-li"><a class="nav-a" href="juegos">Juegos</a></li>
+            <li class="nav-li"><a class="nav-a" href="usuariosCreados">amigos</a></li>
+            <li class="nav-li"><a class="nav-a" href="quienessomos">quienes somos</a></li>
+            <li class="nav-li"><a class="nav-a" href="salir">Salir</a></li>
+        </ul>
+    </nav>
+    <div class="wave">
+        <h1 class="h1-i">Super Game</h1>
+        <h5 id="h5-b">{{user}}@</h5>
+        <img class="wave-img" src="{% static 'img/wave.png' %}">
+    </div>
+</header>
+
+<form action="" method="POST" enctype="multipart/form-data" class="form-p">
+    {% csrf_token %} {{ form.as_p }}
+    <button class="btn-p">crear</button>
+</form>
+{% endblock %}

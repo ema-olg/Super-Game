@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&familia=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/mando.ico' %}">
+    <title>supergame</title>
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+    <footer>
+        <p>Nombre: Juan Emanuel Olguin</p>
+        <p>Correo: ema_07_0@hotmail.com</p>
+    </footer>
+</body>
+
+</html>
